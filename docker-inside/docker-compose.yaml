@@ -1,0 +1,24 @@
+version: "3"
+services:
+  jenkins:
+    image: docker.iranrepo.ir/jenkins/jenkins
+    container_name: jenkins_sandbox
+    privileged: true
+    user: root
+    ports:
+      - 8089:8080
+      - 50000:50000
+    volumes:
+      - /home/${USER_NAME}/jenkins_sandbox_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  agent:
+    build: . 
+    container_name: jenkins_sandbox_agent
+    privileged: true
+    user: root
+    command: bash -c "dockerd"
+    expose:
+      - 22
+    environment:
+      - JENKINS_AGENT_SSH_PUBKEY=${JENKINS_AGENT_SSH_PUBLIC_KEY}
