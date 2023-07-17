@@ -17,7 +17,7 @@ services:
     container_name: jenkins_sandbox_agent
     privileged: true
     user: root
-    command: bash -c "dockerd"
+    command: bash -c "dockerd & setup-sshd"
     expose:
       - 22
     environment:
