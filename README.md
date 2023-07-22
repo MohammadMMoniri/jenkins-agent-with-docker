@@ -25,11 +25,11 @@ This repository provides the following methods for using Docker with Jenkins age
 
 1. Method 1: Docker-in-Docker (DinD)
    - This method involves running a Jenkins agent container with Docker installed inside it. It allows you to run Docker commands and build Docker images within the agent container.
-   - See the `method1-dind` directory for detailed instructions.
+   - See the `dind` directory for detailed instructions.
 
 2. Method 2: Docker Socket Sharing
    - This method involves sharing the Docker socket from the host machine with the Jenkins agent container. It allows the agent to communicate directly with the Docker daemon on the host.
-   - See the `method2-docker-socket-sharing` directory for detailed instructions.
+   - See the `docker-socket-sharing` directory for detailed instructions.
 
 Choose the method that best suits your requirements and follow the instructions provided in the respective directory.
 
