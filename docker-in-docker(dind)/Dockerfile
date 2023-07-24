@@ -1,4 +1,4 @@
-FROM docker.iranrepo.ir/jenkins/ssh-agent
+FROM jenkins/ssh-agent
 
 # USER root
 USER root

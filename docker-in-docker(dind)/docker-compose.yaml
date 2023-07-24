@@ -1,7 +1,7 @@
 version: "3"
 services:
   jenkins:
-    image: docker.iranrepo.ir/jenkins/jenkins
+    image: jenkins/jenkins
     container_name: jenkins_sandbox
     privileged: true
     user: root
